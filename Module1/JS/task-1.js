@@ -1,5 +1,5 @@
 "use strict";
-
+// 1
 const str = "true";
 
 console.log(typeof str);
@@ -16,6 +16,8 @@ const txt = "Привіт";
 
 console.log(typeof txt);
 
+
+// 2
 let age = 5;
 
 console.log(age)
@@ -37,12 +39,11 @@ let isflat = true;
 console.log(isflat)
 
 
-
 const number = 10;
 
 console.log(number)
 
-const txt = 'hi'
+const txt1 = 'hi'
 
 console.log(txt)
 
@@ -50,8 +51,8 @@ const iswindow = true;
 
 console.log(iswindow)
 
-const num = 19;
+const num1 = 19;
 
 console.log(num)
 
-const str = '55';
+const str1 = '55';
