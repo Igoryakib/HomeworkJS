@@ -8,7 +8,7 @@ const num = 123;
 
 console.log(typeof num);
 
-const isflag = true;
+const isFlag = true;
 
 console.log(typeof isflag);
 
@@ -26,17 +26,17 @@ let yourName = 'Igor';
 
 console.log(yourName)
 
-let iscar = false;
+let isCar = false;
 
-console.log(iscar)
+console.log(isCar)
 
 let laptopName = 'Lenovo';
 
 console.log(laptopName)
 
-let isflat = true;
+let isFlat = true;
 
-console.log(isflat)
+console.log(isFlat)
 
 
 const number = 10;
@@ -47,12 +47,14 @@ const txt1 = 'hi'
 
 console.log(txt)
 
-const iswindow = true;
+const isWindow = true;
 
-console.log(iswindow)
+console.log(isWindow)
 
 const num1 = 19;
 
 console.log(num)
 
 const str1 = '55';
+
+console.log(str1);
