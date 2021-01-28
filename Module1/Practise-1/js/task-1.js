@@ -10,7 +10,7 @@ console.log(typeof num);
 
 const isFlag = true;
 
-console.log(typeof isflag);
+console.log(typeof isFlag);
 
 const txt = "Привіт";
 
