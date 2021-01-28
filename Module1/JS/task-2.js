@@ -19,7 +19,7 @@ const x = Number(a);
 
 const y = Number(b);
 
-console.log(x + y);
+console.log(x * y);
 
 // 4
 const a1 = 5 + 3;
@@ -86,6 +86,6 @@ const n = 3;
 
 const m = 4;
 
-const k = (Math.pow(3, 2) + Math.pow(4, 2)) / 5;
+const k = Math.sqrt(Math.pow(3, 2) + Math.pow(4, 2));
 
 console.log(k);
