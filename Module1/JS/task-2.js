@@ -6,12 +6,9 @@ console.log(userName);
 
 // 2
 const myAge = 14;
-
-alert(myAge);
-
 const friendAge = 16;
 
-alert(friendAge);
+alert(myAge + friendAge);
 
 // 3
 const a = prompt('Number1 -');
