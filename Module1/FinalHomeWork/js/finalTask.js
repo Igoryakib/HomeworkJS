@@ -55,6 +55,10 @@ if (userMessage2 === null) {
 if (totalPrice > credits) {
   userMessage = "Недостатньо коштів на рахунку!";
 }
+
+if (Number.isNaN(userMessage2)) {
+    alert('Ви ввели букви, а не число');
+}
 console.log(userMessage);
 
 // 5
