@@ -51,13 +51,12 @@ if (userMessage2 === null) {
   userMessage = `Ви купили ${userMessage2} дроїдів на суму ${totalPrice}, на рахунку залишилося ${
     credits - totalPrice
   } кредитів.`;
-}
-if (totalPrice > credits) {
-  userMessage = "Недостатньо коштів на рахунку!";
-}
-
-if (Number.isNaN(userMessage2)) {
+  if (totalPrice > credits) {
+    userMessage = "Недостатньо коштів на рахунку!";
+  }
+  if (Number.isNaN(userMessage2)) {
     alert('Ви ввели букви, а не число');
+}
 }
 console.log(userMessage);
 
