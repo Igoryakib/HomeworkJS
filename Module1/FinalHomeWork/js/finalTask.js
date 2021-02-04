@@ -99,12 +99,12 @@ do {
         break;
     }
 
-    if (Number.isNaN(input)) {
+    if (isNaN(input)) {
         alert('Ви ввели букву, а не число!!!')
         continue;
     }
 
-    total2 += input;
+    total2 += Number(input);
 
     console.log(input);
 } while(true);
