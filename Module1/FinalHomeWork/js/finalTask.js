@@ -98,15 +98,15 @@ do {
     if (input === null) {
         break;
     }
-
-    if (isNaN(input)) {
+  const x = Number(input);
+    if (Number.isNaN(x)) {
         alert('Ви ввели букву, а не число!!!')
         continue;
     }
 
-    total2 += Number(input);
+    total2 += x;
 
-    console.log(input);
+    console.log(x);
 } while(true);
 
 alert(`Загальна сума чисел дорівнює ${total2}`);
