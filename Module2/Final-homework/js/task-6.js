@@ -16,15 +16,22 @@ do {
   numbers.push(x);
   console.log(numbers);
 
-  if(numbers.length === 0) {
-    console.log('пустий масив');
-    break
-  }
-
 } while (true);
 
-for(let i = 0; i < numbers.length; i += 1) {
-  total += numbers[i];
-}
+if(numbers.length > 0) {
+  for(let i = 0; i < numbers.length; i += 1) {
+    total += numbers[i];
+  }
+} 
+
+// numbers.length === 0 ? null : for(let i = 0; i < numbers.length; i += 1) {
+//   total += numbers[i];
+// }
+
+// if(numbers.length !== 0) {
+//   for(let i = 0; i < numbers.length; i += 1) {
+//     total += numbers[i];
+//   }
+// } 
 
 console.log(`Загальна сума чисел дорівнює ${total}`);

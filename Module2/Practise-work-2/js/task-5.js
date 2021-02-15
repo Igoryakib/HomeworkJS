@@ -3,8 +3,8 @@ const myAverageScore = function (arrays) {
   let total = 0;
   for(let i = 0; i < arrays.length; i += 1) {
     mainMark += arrays[i];
-    total = mainMark / arrays.length;
   }
+  total = mainMark / arrays.length;
 
   if (total >= 91 && total <= 100) {
     const result = `Ваш середній бал ${total} і ваша оцінка Myaveragescore: A`;
