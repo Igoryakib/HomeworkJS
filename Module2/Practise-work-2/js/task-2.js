@@ -1,8 +1,8 @@
-const acceptName = function hello2(name) {
+const hello2 = function(name) {
     return console.log(`Привіт, ${name}`);
     
 };
 
-acceptName('Василь');
-acceptName('Ігор');
-acceptName('Вадим');
+hello2('Василь');
+hello2('Ігор');
+hello2('Вадим');

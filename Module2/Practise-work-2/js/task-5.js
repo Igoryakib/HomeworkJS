@@ -1,23 +1,28 @@
 const myAverageScore = function (arrays) {
-  const mainMark = (arrays[0] + arrays[1] + arrays[2] + arrays[3]) / 4;
+  let mainMark = 0;
+  let total = 0;
+  for(let i = 0; i < arrays.length; i += 1) {
+    mainMark += arrays[i];
+    total = mainMark / arrays.length;
+  }
 
-  if (mainMark >= 91 && mainMark <= 100) {
-    const result = `Ваш середній бал ${mainMark} і ваша оцінка Myaveragescore: A`;
+  if (total >= 91 && total <= 100) {
+    const result = `Ваш середній бал ${total} і ваша оцінка Myaveragescore: A`;
     return result;
   }
 
-  if (mainMark >= 81 && mainMark <= 90) {
-    const result = `Ваш середній бал ${mainMark} і ваша оцінка Myaveragescore: B`;
+  if (total >= 81 && total <= 90) {
+    const result = `Ваш середній бал ${total} і ваша оцінка Myaveragescore: B`;
     return result;
   }
 
-  if (mainMark >= 71 && mainMark <= 80) {
-    const result = `Ваш середній бал ${mainMark} і ваша оцінка Myaveragescore: C`;
+  if (total >= 71 && total <= 80) {
+    const result = `Ваш середній бал ${total} і ваша оцінка Myaveragescore: C`;
     return result;
   }
 
-  if (mainMark <= 70) {
-    const result = `Ваш середній бал ${mainMark} і ваша оцінка Myaveragescore: D`;
+  if (total <= 70) {
+    const result = `Ваш середній бал ${total} і ваша оцінка Myaveragescore: D`;
     return result;
   }
 };

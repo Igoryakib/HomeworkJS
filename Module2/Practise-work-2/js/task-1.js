@@ -1,5 +1,4 @@
-const returnString = function hello1() {
+const hello1 = function() {
     return console.log('Привіт JavaScript');
 };
-
-returnString();
+hello1();
