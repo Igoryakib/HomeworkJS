@@ -15,6 +15,9 @@ const account = {
     return transactionsOperation;
   },
   deposit(amount, type = "deposit") {
+    if (+amount === NaN) {
+      return console.log("Ви ввели не число");
+    }
     this.transactions.push(this.createTransaction(amount, "deposit"));
     if (type === "deposit") {
       this.balance += amount;
@@ -22,6 +25,9 @@ const account = {
     return `Успішна транзакція баланс аккаунта - ${this.balance}`;
   },
   withdraw(amount, type = "withdraw") {
+    if (+amount === NaN) {
+      return console.log("Ви ввели не число");
+    }
     this.transactions.push(this.createTransaction(amount, "withdraw"));
     if (type === "withdraw" && amount < this.balance) {
       this.balance = this.balance - amount;
