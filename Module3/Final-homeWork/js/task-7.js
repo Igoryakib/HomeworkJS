@@ -18,7 +18,7 @@ const account = {
     if (Number.isNaN(+amount)) {
       return console.log("Ви ввели не число");
     }
-    this.transactions.push(this.createTransaction(amount, "deposit"));
+    this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
     if (type === "deposit") {
       this.balance += amount;
     }
@@ -28,7 +28,7 @@ const account = {
     if (Number.isNaN(+amount)) {
       return console.log("Ви ввели не число");
     }
-    this.transactions.push(this.createTransaction(amount, "withdraw"));
+    this.transactions.push(this.createTransaction(amount, Transaction.WITHDRAW));
     if (type === "withdraw" && amount < this.balance) {
       this.balance = this.balance - amount;
       return `Успішна транзакція залишок на аккаунті - ${this.balance}`;
