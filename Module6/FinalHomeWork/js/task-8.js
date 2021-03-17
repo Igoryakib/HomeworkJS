@@ -91,8 +91,29 @@ const users = [
 //     return result;
 //   };
 
-//   2 спосіб
+//   2 спосіб Звичайна функція
+// const getUsersWithFriend = (users, friendName) => {
+//   // твій код
+//   const result = users.reduce(function(acc, item){
+//     if(item.friends.includes(friendName)) {
+//        acc.push(item.name);
+//     }
+//     return acc;
+//   }, [])
+//   return result;
+// };
 
+// Стрілкова функція
+const getUsersWithFriend = (users, friendName) => {
+  // твій код
+  const result = users.reduce((acc, item) => {
+    if(item.friends.includes(friendName)) {
+       acc.push(item.name);
+    }
+    return acc;
+  }, [])
+  return result;
+};
 
 console.log(getUsersWithFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 console.log(getUsersWithFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sheree Anthony' ]

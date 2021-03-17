@@ -86,7 +86,7 @@ const users = [
 ];
 const getUserNames = (users) => {
   // твій код
-  const result = users.map((users) => users.name);
+  const result = users.map(users => users.name);
   return result;
 };
 
