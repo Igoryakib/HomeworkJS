@@ -1,4 +1,4 @@
-const countProps = function (obj) {
+const countProps = obj => {
     const values = Object.keys(obj);
     return values.length;
 };

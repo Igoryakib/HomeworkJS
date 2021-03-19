@@ -1,4 +1,4 @@
-const findBestEmployee = function (employees) {
+const findBestEmployee = employees => {
     const employee = Object.entries(employees);
     let TheBestEmployee = employee[0];
     for(const item of employee) {

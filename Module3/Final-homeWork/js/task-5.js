@@ -5,7 +5,7 @@ const products = [
   { name: "Захоплення", price: 1200, quantity: 2 },
 ];
 
-const getAllPropValues = function(arr, prop) {
+const getAllPropValues = (arr, prop) => {
     let result = [];
     for(const item of arr) {
         for(const i in item) {

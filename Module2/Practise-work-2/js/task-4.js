@@ -1,4 +1,4 @@
-const myNewArrowFunction = function(...args) {
+const myNewArrowFunction = (...args) => {
     return console.log(args);
 };
 

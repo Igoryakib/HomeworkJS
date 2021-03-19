@@ -5,7 +5,7 @@ const products = [
   { name: "Захоплення", price: 1200, quantity: 2 },
 ];
 
-const calculateTotalPrice = function (allProdcuts, productName) {
+const calculateTotalPrice = (allProdcuts, productName) =>{
   let total = 0;
   for (const item of allProdcuts) {
     if (productName === item.name) {

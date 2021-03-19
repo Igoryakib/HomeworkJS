@@ -14,43 +14,7 @@ const account = {
 
     return transactionsOperation;
   },
-  deposit(amount, type = "deposit") {
-    if (Number.isNaN(+amount)) {
-      return console.log("Ви ввели не число");
-    }
-    this.transactions.push(this.createTransaction(amount, Transaction.DEPOSIT));
-    if (type === "deposit") {
-      this.balance += amount;
-    }
-    return `Успішна транзакція баланс аккаунта - ${this.balance}`;
-  },
-  withdraw(amount, type = "withdraw") {
-    if (Number.isNaN(+amount)) {
-      return console.log("Ви ввели не число");
-    }
-    this.transactions.push(this.createTransaction(amount, Transaction.WITHDRAW));
-    if (type === "withdraw" && amount < this.balance) {
-      this.balance = this.balance - amount;
-      return `Успішна транзакція залишок на аккаунті - ${this.balance}`;
-    }
-    return "Недостатньо коштів";
-  },
-  getBalance() {
-    return this.balance;
-  },
-  getTransactionDetails(id) {
-    return this.transactions[id];
-  },
-  getTransactionTotal(type1) {
-    let result = 0;
-    for (const i of this.transactions) {
-      const { amountTransactions, typeTransactions } = i;
-      if (type1 === typeTransactions) {
-        result += amountTransactions;
-      }
-    }
-    return `Кількість коштів при ${type1} - ${result}`;
-  },
+  z,
 };
 
 console.log(account.deposit(10000));

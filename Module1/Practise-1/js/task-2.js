@@ -26,7 +26,7 @@ console.log(number)
 
 const txt1 = 'hi'
 
-console.log(txt)
+console.log(txt1)
 
 const isWindow = true;
 
@@ -34,7 +34,7 @@ console.log(isWindow)
 
 const num1 = 19;
 
-console.log(num)
+console.log(num1)
 
 const str1 = '55';
 

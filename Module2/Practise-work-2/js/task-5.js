@@ -1,4 +1,4 @@
-const myAverageScore = function (arrays) {
+const myAverageScore = arrays => {
   let mainMark = 0;
   let total = 0;
   for(let i = 0; i < arrays.length; i += 1) {
