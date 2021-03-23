@@ -1,14 +1,21 @@
-const uniqueLetters = (item) => {
-  const itemArr = item.split("");
-  let emptyArr = [];
-  for(let i = 0; i < itemArr.length; i +=1) {
-    if(emptyArr.includes(itemArr[i])) {
-      return false;
+// const uniqueLetters = (item) => {
+//   const itemArr = item.split("");
+//   let emptyArr = [];
+//   for(let i = 0; i < itemArr.length; i +=1) {
+//     if(emptyArr.includes(itemArr[i])) {
+//       return false;
       
-    }
-    emptyArr.push(itemArr[i])
-  }
-  return true;
+//     }
+//     emptyArr.push(itemArr[i])
+//   }
+//   return true;
+// };
+
+const uniqueLetters = (item) => {
+  let result;
+  const itemArr = item.split('')
+  .reduce((acc, value) => (acc.includes(value) ? result = value : [...acc, value]), []);
+  return !Boolean(result);
 };
 
 const sortFunction = item => {
