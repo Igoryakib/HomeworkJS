@@ -1,0 +1,9 @@
+#gallery {
+    display: flex;
+    width: 800px;
+    justify-content: space-between;
+}
+img {
+    width: 250px;
+    height: auto;
+}
