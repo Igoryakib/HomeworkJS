@@ -2,10 +2,10 @@ const inputTextRef = document.querySelector('#name-input');
 const spanOutputRef = document.querySelector('#name-output');
 
 const writeNameFn = () => {
+    spanOutputRef.textContent = inputTextRef.value;
     if(spanOutputRef.textContent === '') {
         spanOutputRef.textContent = 'незнайомець';
     }
-    spanOutputRef.textContent = inputTextRef.value
 };
 
 inputTextRef.addEventListener('input', writeNameFn)
