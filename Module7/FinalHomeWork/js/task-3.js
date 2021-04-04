@@ -19,11 +19,13 @@ const images = [
   const ulGalleryRef = document.querySelector('#gallery')
 
   for(let i = 0; i < images.length; i += 1) {
-      const liImgRef = document.createElement('img');
+      const ImgRef = document.createElement('img');
+      const liRef = document.createElement('li');
       const addAtributeFn = item => {
         item.setAttribute('src', images[i].url);
         item.setAttribute('alt', images[i].alt);
-        return ulGalleryRef.appendChild(item);
+        return liRef.appendChild(item);
       };
-      console.log(addAtributeFn(liImgRef));
+      ulGalleryRef.appendChild(liRef);
+      console.log(addAtributeFn(ImgRef));
   }
