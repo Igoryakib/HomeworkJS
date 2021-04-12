@@ -33,7 +33,7 @@ const createElementsFn = (item) => {
 
 console.log(createElementsFn(gallery));
 
-let nextPicture = +modalImgRef.getAttribute('data-index');
+let nextPicture = 0;
 let previousPicture = gallery.length;
 
 const keyNextPictureFn = (event) => {
@@ -80,14 +80,13 @@ const openModal = (event) => {
   modalWindow.classList.add("is-open");
   modalImgRef.setAttribute("src", event.target.getAttribute("data-source"));
   modalImgRef.setAttribute("alt", event.target.getAttribute("alt"));
-  modalImgRef.setAttribute("data-index", event.target.getAttribute("data-index"));
   window.addEventListener("keydown", keyCloseModal);
   window.addEventListener("keydown", keyNextPictureFn);
   window.addEventListener("keydown", keyPreviousPicture);
 };
 
 const closeModal = () => {
-  nextPicture = +modalImgRef.getAttribute('data-index');
+  nextPicture = 0;
   previousPicture = gallery.length;
   modalWindow.classList.remove("is-open");
   modalImgRef.removeAttribute("src");
