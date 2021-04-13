@@ -24,6 +24,7 @@ const createElementsFn = (item) => {
     imgRef.setAttribute("data-source", item.original);
     imgRef.setAttribute("alt", item.description);
     imgRef.setAttribute("data-index", idx);
+    aRef.setAttribute('data-index', idx)
     aRef.appendChild(imgRef);
     liRef.append(aRef);
     return ulRef.appendChild(liRef);
@@ -33,13 +34,14 @@ const createElementsFn = (item) => {
 
 console.log(createElementsFn(gallery));
 
-let nextPicture = 0;
-let previousPicture = gallery.length;
+let nextPicture;
+// let previousPicture;
 
 const keyNextPictureFn = (event) => {
-  nextPicture += 1;
+  console.log(nextPicture);
   if (event.code === "ArrowRight") {
-    if (nextPicture === 9) {
+    nextPicture += 1;
+    if (nextPicture === gallery.length) {
       nextPicture = 0;
       const firstImgRef = document.querySelector(`img[data-index = '0']`);
       return modalImgRef.setAttribute(
@@ -56,9 +58,9 @@ const keyNextPictureFn = (event) => {
 
 const keyPreviousPicture = (event) => {
   if (event.code === "ArrowLeft") {
-    previousPicture -= 1;
-    if (previousPicture === -1) {
-      previousPicture = gallery.length;
+    nextPicture -= 1;
+    if (nextPicture === -1) {
+      nextPicture = gallery.length;
       const lastImgRef = document.querySelector(`img[data-index = '8']`);
       return modalImgRef.setAttribute(
         "src",
@@ -66,7 +68,7 @@ const keyPreviousPicture = (event) => {
       );
     }
     const previousImg = document.querySelector(
-      `img[data-index = '${previousPicture}']`
+      `img[data-index = '${nextPicture}']`
     );
     return modalImgRef.setAttribute(
       "src",
@@ -83,11 +85,12 @@ const openModal = (event) => {
   window.addEventListener("keydown", keyCloseModal);
   window.addEventListener("keydown", keyNextPictureFn);
   window.addEventListener("keydown", keyPreviousPicture);
+  nextPicture = +event.target.dataset.index;
+  // previousPicture = +event.target.dataset.index;
 };
 
 const closeModal = () => {
-  nextPicture = 0;
-  previousPicture = gallery.length;
+  // previousPicture = gallery.length;
   modalWindow.classList.remove("is-open");
   modalImgRef.removeAttribute("src");
   window.removeEventListener("keydown", keyCloseModal);
