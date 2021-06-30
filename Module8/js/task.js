@@ -36,6 +36,7 @@ console.log(createElementsFn(gallery));
 
 let nextPicture;
 // let previousPicture;
+console.log(nextPicture);
 
 const keyNextPictureFn = (event) => {
   console.log(nextPicture);
