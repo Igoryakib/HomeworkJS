@@ -1,0 +1,117 @@
+@import './reset.scss';
+@import './variables.scss';
+
+.bicycle__section {
+    margin: 0 auto;
+    text-align: center;
+    margin: 100px 0 100px 0;
+    overflow: hidden;
+}
+
+.bicycle__content {
+    margin: 0 0 50px 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-rows: repeat(7, minmax(100px, 1fr));
+}
+
+.bicycle__card {
+    position: relative;
+}
+
+.bicycle__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bicycle__card--bigCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.bicycle__card--bigCard2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+.bicycle__logoOfBigBicycle {
+    width: 100px;
+    height: 100px;
+}
+
+.bicycle__card--textCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bicycle__title {
+    font-size: 18px;
+    color: $headline-color;
+    font-family: $main-font;
+}
+
+.bicycle__text {
+    font-size: 16px;
+    color: $text-color;
+    font-family: $main-font;
+    text-align-last: left;
+}
+
+.bicycle__card--smallCard2 {
+    grid-column-start: 1;
+}
+
+.bicycle__img--mediumCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: span 2;
+}
+
+.bicycle__img--mediumCard2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+.bicycle__card--smallCard3 {
+    grid-column-start: 2;
+}
+
+.bicycle__gallery2 {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, minmax(100px, 1fr));
+}
+
+.bicycle__card-gallery {
+    position: relative;
+    & img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.bicycle__card-gallery--horizontal {
+    grid-column: span 2;
+}
+
+.bicycle__card-gallery--vertical {
+    grid-row: span 2;
+}
